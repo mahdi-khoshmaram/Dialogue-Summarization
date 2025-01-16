@@ -4,11 +4,6 @@ hf_dataset_name = "knkarthick/dialogsum"
 dataset = load_dataset(hf_dataset_name, split=None)
 
 # Dataset Inspection
-# dataset = {
-#               train: [{},{},{},...,{}]
-#               validation: [{},{},{},...,{}]
-#               test: [{},{},{},...,{}]
-#           }
 for split in dataset.keys():
     print(f"{split}: {len(dataset[split])} rows")
 
@@ -16,7 +11,6 @@ for split in dataset.keys():
 indices = [20,400]
 
 dashLine = ''.join(['-' for j in range(100)])
-
 
 for num, index in enumerate(indices):
     print(dashLine)
